@@ -11,19 +11,25 @@ enum TokenType {
 
   LPAREN,
   RPAREN,
+  LCURLY,
+  RCURLY,
+  LSQUARE,
+  RSQUARE,
+
+  EOF,
 }
 
-Map<TokenType, String> token_matches = {
-  TokenType.INT: "0123456789",
-  TokenType.FLOAT: "0123456789.",
-  TokenType.STRING: "\"",
+Map<String, TokenType> operator_matches = {
+  "+": TokenType.PLUS,
+  "-": TokenType.SUB,
+  "/": TokenType.DIV,
+  "*": TokenType.MUL,
+  "%": TokenType.MOD,
 
-  TokenType.PLUS: "+",
-  TokenType.SUB: "-",
-  TokenType.DIV: "/",
-  TokenType.MUL: "*",
-  TokenType.MOD: "%",
-
-  TokenType.LPAREN: "(",
-  TokenType.RPAREN: ")",
+  "(": TokenType.LPAREN,
+  ")": TokenType.RPAREN,
+  "{": TokenType.LCURLY,
+  "}": TokenType.RCURLY,
+  "[": TokenType.LSQUARE,
+  "]": TokenType.RSQUARE,
 };

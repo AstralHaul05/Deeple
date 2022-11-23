@@ -1,13 +1,16 @@
 class Position {
-  int ind = -1;
-  int ln = 0;
-  int col = -1;
+  int index = -1;
+  int line = 1;
+  int column = 0;
 
-  Position(int ind, int ln, int col) {
-    this.ind = ind;
-    this.ln = ln;
-    this.col = col;
+  void advance(String? current_char) {
+    index++;
+    column++;
+    if (current_char == "\n") {
+      line++;
+      column = 1;
+    }
   }
 
-  
+  String toString() => "[$line,$column]";
 }

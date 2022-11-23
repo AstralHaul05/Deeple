@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:intl/intl.dart';
 
 import 'stability.dart';
+import 'tokeniser.dart';
 
 class Deeple {
   static String name = "Deeple";
@@ -25,9 +26,12 @@ class Deeple {
   static String get id => 
     "$name $version ($time) $local_host_name [($num_proccessors) $architecture] on $operating_system";
 
-  List<String> src = [];
+  String src = "";
+  late Tokeniser tokeniser;
 
-  Deeple(List<String> source_code) {
+  Deeple(String source_code) {
     this.src = source_code;
+    this.tokeniser = new Tokeniser(source_code);
+    this.tokeniser.tokenise();
   }
 }

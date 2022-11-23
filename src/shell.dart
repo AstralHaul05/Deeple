@@ -23,7 +23,13 @@ void main(List<String> args) {
     return;
   }
 
-  List<String> source_code = File(args[0]).readAsLinesSync();
+  String source_code = File(args[0]).readAsStringSync();
 
-  Deeple deeple = new Deeple(source_code);
+  try {
+    Deeple deeple = new Deeple(source_code);
+  }
+  catch (e) {
+      print(e.toString());
+      return;
+  }
 }
