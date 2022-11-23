@@ -1,7 +1,4 @@
-import 'dart:io';
-
-import 'position.dart';
-import 'token_types.dart';
+import '../tokeniser/position.dart';
 
 class SyntaxError implements Exception {
   String name = "SyntaxError";

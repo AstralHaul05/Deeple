@@ -1,5 +1,5 @@
 import 'position.dart';
-import 'syntax_error.dart';
+import '../errors/syntax_error.dart';
 import 'token.dart';
 import 'token_types.dart';
 

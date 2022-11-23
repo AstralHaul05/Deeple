@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:intl/intl.dart';
 
-import 'stability.dart';
-import 'tokeniser.dart';
+import 'data/stability.dart';
+import 'tokeniser/tokeniser.dart';
 
 class Deeple {
   static String name = "Deeple";
